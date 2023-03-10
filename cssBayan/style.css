@@ -1,0 +1,55 @@
+.wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 15px;
+  overflow: hidden;
+}
+.heading, .bayan-label {
+  color: #7d0202c7;
+  font-family: "Times New Roman", serif;
+  font-size: 5em;
+  font-style: normal;
+  font-weight: 500;
+}
+.bayan-container {
+  cursor: pointer;
+}
+.bayan-mem {
+  width: 50%;
+  margin: 0 auto;
+  height: 0;
+  box-sizing: border-box;
+  transition: color 0.5s, padding 0.5s;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgb(109 8 36 / 72%);
+  border-radius: 10px;
+}
+.bayan-label {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  color: #4a1a1a;
+  box-sizing: border-box;
+  font-weight: 300;
+  font-size: 3em;
+  transition: color .35s;
+  border-top: 2px solid #4a1a1a;
+  padding: 15px 20px;
+  margin-bottom: 5px;
+}
+.bayan-label:hover {
+  color: #bf0404a1;
+}
+.bayan-input {
+  display: none;
+}
+.bayan-input:checked + .bayan-label {
+  color: #bf0404;
+}
+.bayan-input:checked + .bayan-label + .bayan-mem {
+  height: auto;
+  margin: 10px auto 20px;
+}
+.bayan-img {
+  width: 100%;
+}
