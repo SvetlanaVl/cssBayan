@@ -1,28 +1,30 @@
 .wrapper {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 1em;
   overflow: hidden;
+  user-select: none;
 }
 .heading, .bayan-label {
   color: #7d0202c7;
   font-family: "Times New Roman", serif;
-  font-size: 5em;
+  font-size: 3em;
   font-style: normal;
   font-weight: 500;
+  margin: 0.37em 0;
 }
 .bayan-container {
   cursor: pointer;
 }
 .bayan-mem {
-  width: 50%;
-  margin: 0 auto;
+  width: 100%;
   height: 0;
   box-sizing: border-box;
   transition: color 0.5s, padding 0.5s;
   overflow: hidden;
-  box-shadow: 0 3px 10px rgb(109 8 36 / 72%);
-  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.8em;
 }
 .bayan-label {
   cursor: pointer;
@@ -31,11 +33,11 @@
   color: #4a1a1a;
   box-sizing: border-box;
   font-weight: 300;
-  font-size: 3em;
+  font-size: 1.5em;
   transition: color .35s;
-  border-top: 2px solid #4a1a1a;
-  padding: 15px 20px;
-  margin-bottom: 5px;
+  border-top: 0.1em solid #4a1a1a;
+  padding: 0.7em 1em;
+  margin: 0;
 }
 .bayan-label:hover {
   color: #bf0404a1;
@@ -46,10 +48,46 @@
 .bayan-input:checked + .bayan-label {
   color: #bf0404;
 }
-.bayan-input:checked + .bayan-label + .bayan-mem {
+.bayan-input:checked + .bayan-label + .bayan-mem, .bayan-input:hover + .bayan-label + .bayan-mem, .bayan-mem:hover {
   height: auto;
-  margin: 10px auto 20px;
+  animation-duration: 2s;
+  animation-name: imgshow;
 }
 .bayan-img {
-  width: 100%;
+  width: 25%;
+  box-shadow: 0 0.2em 0.8em rgb(109 8 36 / 72%);
+  border-radius: 0.8em;
+}
+
+@keyframes imgshow {
+  from {
+    width: 70%;
+    margin-left: 10%;
+  }
+
+  to {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.bayan-container:hover > .bayan-label {
+  color: #bf0404;
+  background-image: url(./assets/plus.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 1em;
+}
+.bayan-container:hover > .bayan-input:checked + .bayan-label {
+  background-image: url(./assets/close.jpg);
+  background-size: 0.7em;
+}
+.bayan-input:hover + .bayan-label {
+  background-image: url(./assets/close.jpg);
+  background-size: 0.7em;
+}
+.bayan-mem:hover {
+  height: auto;
+}
+.bayan-mem:active {
+  filter: brightness(80%)
 }
