@@ -79,39 +79,8 @@
     margin-right: 0;
   }
 }
-
-.bayan-container:hover > .bayan-label > .bayan-label_text-container {
-  background-image: url(./assets/plus.jpg);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: 1em;
-}
-.bayan-container:hover > .bayan-label > .bayan-label_text-container > .bayan-label_text {
-  color: #bf0404;
-}
-
-.bayan-container:hover > .bayan-input:checked + .bayan-label > .bayan-label_text-container {
-  background-image: url(./assets/close.jpg);
-  background-size: 0.7em;
-  animation-duration: 1s;
-  animation-name: closeshow;
-}
-.bayan-input:hover + .bayan-label > .bayan-label_text-container {
-  background-image: url(./assets/close.jpg);
-  background-size: 0.7em;
-  animation-duration: 1s;
-  animation-name: closeshow;
-}
-.bayan-mem:hover {
-  height: auto;
-}
 .bayan-mem:active {
   filter: brightness(80%)
-}
-.bayan-label:hover > .bayan-mem {
-  height: auto;
-  animation-duration: 2s;
-  animation-name: imgshow;
 }
 .bayan-input:checked + .bayan-label > .bayan-mem {
   height: auto;
@@ -127,7 +96,7 @@
     font-size: 2.5em;
   }
   .bayan-label_text {
-    font-size: 2em;
+    font-size: 1.7em;
   }
 }
 @media screen and (min-width: 821px) {
@@ -152,5 +121,51 @@
   }
   .bayan-label_text {
     font-size: 2em;
+  }
+}
+@media (hover: hover) {
+  .bayan-container:hover > .bayan-label > .bayan-label_text-container {
+    background-image: url(./assets/plus.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 1em;
+  }
+  .bayan-container:hover > .bayan-label > .bayan-label_text-container > .bayan-label_text {
+    color: #bf0404;
+  }
+  
+  .bayan-container:hover > .bayan-input:checked + .bayan-label > .bayan-label_text-container {
+    background-image: url(./assets/close.jpg);
+    background-size: 0.7em;
+    animation-duration: 1s;
+    animation-name: closeshow;
+  }
+  .bayan-input:hover + .bayan-label > .bayan-label_text-container {
+    background-image: url(./assets/close.jpg);
+    background-size: 0.7em;
+    animation-duration: 1s;
+    animation-name: closeshow;
+  }
+  .bayan-mem:hover {
+    height: auto;
+  }
+  .bayan-label:hover > .bayan-mem {
+    height: auto;
+    animation-duration: 2s;
+    animation-name: imgshow;
+  }
+}
+@media (hover: none) {
+  .bayan-label_text-container {
+    background-image: url(./assets/plus.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 1em;
+  }
+  .bayan-input:checked + .bayan-label > .bayan-label_text-container {
+    background-image: url(./assets/close.jpg);
+    background-size: 0.7em;
+    animation-duration: 1s;
+    animation-name: closeshow;
   }
 }
