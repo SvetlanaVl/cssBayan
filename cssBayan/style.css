@@ -8,7 +8,7 @@
   font-family: "Times New Roman", serif;
   font-size: 1.7em;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 900;
   margin: 0.6em 0;
   padding-left: 0.5em;
 }
@@ -28,17 +28,14 @@
 .bayan-label {
   cursor: pointer;
   display: block;
-  color: #4a1a1a;
   box-sizing: border-box;
-  font-weight: 300;
-  font-size: 0.8em;
   transition: color .35s;
   border-top: 0.1em solid #4a1a1a;
   padding: 0.7em 1em;
   margin: 0;
 }
 .bayan-label_text {
-  font-weight: 300;
+  font-weight: 700;
   font-size: 1.5em;
   padding-left: 0;
   margin: 0;
@@ -47,7 +44,7 @@
 .bayan-input {
   display: none;
 }
-.bayan-input:checked + .bayan-label {
+.bayan-input:checked + .bayan-label > .bayan-label_text-container > .bayan-label_text {
   color: #bf0404;
 }
 .bayan-label_text-container {
@@ -82,12 +79,15 @@
     margin-right: 0;
   }
 }
+
 .bayan-container:hover > .bayan-label > .bayan-label_text-container {
-  color: #bf0404;
   background-image: url(./assets/plus.jpg);
   background-repeat: no-repeat;
   background-position: right;
   background-size: 1em;
+}
+.bayan-container:hover > .bayan-label > .bayan-label_text-container > .bayan-label_text {
+  color: #bf0404;
 }
 
 .bayan-container:hover > .bayan-input:checked + .bayan-label > .bayan-label_text-container {
