@@ -154,6 +154,9 @@
     animation-duration: 2s;
     animation-name: imgshow;
   }
+  .bayan-input:active + .bayan-label > .bayan-label_text-container > .bayan-label_text {
+    color: #4a1a1a;
+  }
 }
 @media (hover: none) {
   .bayan-label_text-container {
