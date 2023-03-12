@@ -1,0 +1,189 @@
+.wrapper {
+  margin: 0 auto;
+  padding: 0 1em;
+  user-select: none;
+}
+.heading, .bayan-label_text {
+  color: #7d0202c7;
+  font-family: "Times New Roman", serif;
+  font-size: 1.7em;
+  font-style: normal;
+  font-weight: 900;
+  margin: 0.6em 0;
+  padding-left: 0.5em;
+}
+.bayan-container {
+  cursor: pointer;
+}
+.bayan-mem {
+  width: 100%;
+  height: 0;
+  box-sizing: border-box;
+  transition: color 0.5s, padding 0.5s;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.8em;
+  padding-top: 0.8em;
+}
+.bayan-label {
+  cursor: pointer;
+  display: block;
+  box-sizing: border-box;
+  transition: color .35s;
+  border-top: 0.1em solid #4a1a1a;
+  padding: 0.7em 1em;
+  margin: 0;
+}
+.bayan-label_text {
+  font-weight: 700;
+  font-size: 1.5em;
+  padding-left: 0;
+  margin: 0;
+  padding-top: 0.5em;
+}
+.bayan-input {
+  display: none;
+}
+.bayan-input:checked + .bayan-label > .bayan-label_text-container > .bayan-label_text {
+  color: #bf0404;
+}
+.bayan-label_text-container {
+  display: flex;
+  justify-content: space-between;
+}
+.img-container {
+  display: none;
+}
+.bayan-img {
+  width: 60%;
+  box-shadow: 0 0.2em 0.8em rgb(109 8 36 / 72%);
+  border-radius: 0.8em;
+}
+@keyframes imgshow {
+  from {
+    width: 70%;
+    margin-left: 10%;
+  }
+
+  to {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@keyframes closeshow {
+  from {
+    margin-right: 2%;
+  }
+
+  to {
+    margin-right: 0;
+  }
+}
+.bayan-mem:active {
+  filter: opacity(0.5);
+}
+.bayan-container:active > .bayan-input:active + .bayan-label > .bayan-label_text-container {
+  background-image: url(./assets/close-active.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 0.7em;
+}
+.bayan-input:checked + .bayan-label > .bayan-mem {
+  height: auto;
+  animation-duration: 2s;
+  animation-name: imgshow;
+}
+.bayan-input:active + .bayan-label > .bayan-label_text-container > .bayan-label_text {
+  color: #4a1a1a;
+}
+
+@media screen and (min-width: 321px) {
+  .heading {
+    font-size: 2.5em;
+  }
+  .bayan-label_text {
+    font-size: 1.7em;
+  }
+}
+@media screen and (min-width: 821px) {
+  .heading {
+    font-size: 2em;
+  }
+  .bayan-label_text {
+    font-size: 1.7em;
+  }
+  .bayan-img {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .wrapper {
+    max-width: 1160px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .heading {
+    font-size: 2.5em;
+  }
+  .bayan-label_text {
+    font-size: 2em;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .bayan-container:hover > .bayan-label > .bayan-label_text-container {
+    background-image: url(./assets/plus.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 1em;
+  }
+  .bayan-container:hover > .bayan-label > .bayan-label_text-container > .bayan-label_text {
+    color: #bf0404;
+  }
+  
+  .bayan-container:hover > .bayan-input:checked + .bayan-label > .bayan-label_text-container {
+    background-image: url(./assets/close.jpg);
+    background-size: 0.7em;
+    animation-duration: 1s;
+    animation-name: closeshow;
+  }
+  .bayan-input:hover + .bayan-label > .bayan-label_text-container {
+    background-image: url(./assets/close.jpg);
+    background-size: 0.7em;
+    animation-duration: 1s;
+    animation-name: closeshow;
+  }
+  .bayan-mem:hover {
+    height: auto;
+  }
+  .bayan-label:hover > .bayan-mem {
+    height: auto;
+    animation-duration: 2s;
+    animation-name: imgshow;
+  }
+  .bayan-input:active + .bayan-label > .bayan-label_text-container > .bayan-label_text {
+    color: #4a1a1a;
+  }
+  .bayan-container:active > .bayan-input:active + .bayan-label > .bayan-label_text-container {
+    background-image: url(./assets/close-active.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 0.7em;
+  }
+  .bayan-mem:active {
+    filter: opacity(0.5);
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .bayan-label_text-container {
+    background-image: url(./assets/plus.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 1em;
+  }
+  .bayan-input:checked + .bayan-label > .bayan-label_text-container {
+    background-image: url(./assets/close.jpg);
+    background-size: 0.7em;
+    animation-duration: 1s;
+    animation-name: closeshow;
+  }
+}
