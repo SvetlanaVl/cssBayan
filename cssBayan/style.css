@@ -80,7 +80,13 @@
   }
 }
 .bayan-mem:active {
-  filter: brightness(80%)
+  filter: opacity(0.5);
+}
+.bayan-container:active > .bayan-input:active + .bayan-label > .bayan-label_text-container {
+  background-image: url(./assets/close-active.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 0.7em;
 }
 .bayan-input:checked + .bayan-label > .bayan-mem {
   height: auto;
@@ -156,6 +162,15 @@
   }
   .bayan-input:active + .bayan-label > .bayan-label_text-container > .bayan-label_text {
     color: #4a1a1a;
+  }
+  .bayan-container:active > .bayan-input:active + .bayan-label > .bayan-label_text-container {
+    background-image: url(./assets/close-active.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 0.7em;
+  }
+  .bayan-mem:active {
+    filter: opacity(0.5);
   }
 }
 @media (hover: none) and (pointer: coarse) {
