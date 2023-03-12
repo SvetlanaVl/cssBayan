@@ -123,7 +123,7 @@
     font-size: 2em;
   }
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .bayan-container:hover > .bayan-label > .bayan-label_text-container {
     background-image: url(./assets/plus.jpg);
     background-repeat: no-repeat;
